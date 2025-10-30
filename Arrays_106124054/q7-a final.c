@@ -1,0 +1,34 @@
+//q7-a Array rotation by iteration
+
+#include<stdio.h>
+
+int main(){
+	int n;
+	printf("Enter size of array: ");
+	scanf("%d",&n);
+	int arr[n];
+	for(int i=0;i<n;i++){
+	printf("Enter element:");
+	scanf("%d",&arr[i]);
+	}
+	int k;
+	printf("How many digits to rotate by?");
+	scanf("%d",&k);
+	int ans[n];
+	for(int i=0;i<n;i++){
+		ans[(i+k)%n]=arr[i];
+	}
+	for(int i=0;i<n;i++){
+		printf("%d ",ans[i]);
+	}
+	return 0;
+}
+
+/*Enter size of array: 5
+Enter element:1
+Enter element:2
+Enter element:3
+Enter element:4
+Enter element:5
+How many digits to rotate by?2
+4 5 1 2 3 */
